@@ -1,0 +1,164 @@
+body{
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    position:relative;
+    top: 0;
+    width:100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+}
+
+section .row{
+    position:relative;
+    top: -60%;
+    width:100%;
+    display: flex;
+    padding:10px 0;
+    white-space: nowrap;
+    font-size: 64px;
+    user-select: none;
+    transform: rotate(-30deg);
+}
+
+svg{
+    width:100px;
+    color: rgb(17, 212, 26);
+    transition: 1s;
+    padding: 0 5px;
+    user-select: none;
+    cursor: default;
+}
+
+svg:hover{
+    transition: 0s;
+    color: rgba(255, 0, 0, 0.74);
+    fill: rgba(0, 255, 221, 0.575);
+    /* text-shadow: 0 0 120px #0f0; */
+    /* filter: drop-shadow(0px 0 120px #0f0); */
+}
+
+.row div{
+    animation: animate 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.row div:nth-child(2){
+    animation: animate2 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate2 {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+.row:nth-child(even) div{
+    animation: animate3 80s linear infinite;
+    animation-delay: -80s;
+}
+
+.row:nth-child(even) div:nth-child(2){
+    animation: animate4 80s linear infinite;
+    animation-delay: -40s;
+}
+
+@keyframes animate3 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animate4 {
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+.introSection{
+    z-index: 2;
+    position: absolute;
+    color: #fff;
+    left: 4%;
+    top:25%;
+    font-size: 30px;
+    user-select: none;
+    pointer-events: none;
+}
+
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+    font-size: 20px;
+}
+
+
+.name-small{
+    display: none;
+    font-size: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .introSection{
+        top:20%;
+    }
+    canvas{
+        font-size: 15px;
+    }
+    /* .name-small{
+        display: inline;
+    } */
+    
+}
+
+@media screen and (max-width: 768px) {
+    canvas{
+        display:none;
+    }
+    .introSection{
+        font-size: 30px;
+    }
+    .name-small{
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .introSection{
+        font-size: 10px;
+    }
+    .name-small{
+        font-size: 60px;
+    }
+}
