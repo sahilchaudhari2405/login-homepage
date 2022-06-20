@@ -30,10 +30,10 @@
     <div class="navbarOffCanvas">
         <span class="closeBtn" onclick="openNavbar()">&times;</span>
         <ul class="offCanvasLinks">
-            <li class="navLinks"><a href="index.html">Home</a></li>
-            <li class="navLinks"><a href="project.html">Projects</a></li>
-            <li class="navLinks"><a href="about.html">About</a></li>
-            <li class="navLinks"><a href="contact.html">Contact</a></li>
+            <li class="navLinks"><a href="../index.php">Logout</a></li>
+            <li class="navLinks"><a href="project.php">Projects</a></li>
+            <li class="navLinks"><a href="about.php">About</a></li>
+            <li class="navLinks"><a href="contact.php">Contact</a></li>
         </ul>
     </div>
     <!----------------- Introduction Section ------------------>
